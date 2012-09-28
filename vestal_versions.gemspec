@@ -5,13 +5,13 @@
 
 Gem::Specification.new do |s|
   s.name = %q{vestal_versions}
-  s.version = "1.0.2"
+  s.version = "1.0.2.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["laserlemon"]
-  s.date = %q{2010-01-13}
+  s.authors = ["conroywhitney"]
+  s.date = %q{2012-09-28}
   s.description = %q{Keep a DRY history of your ActiveRecord models' changes}
-  s.email = %q{steve@laserlemon.com}
+  s.email = %q{conroy@quirky.com}
   s.extra_rdoc_files = [
     "LICENSE",
      "README.rdoc"
@@ -59,7 +59,7 @@ Gem::Specification.new do |s|
      "test/versions_test.rb",
      "vestal_versions.gemspec"
   ]
-  s.homepage = %q{http://github.com/laserlemon/vestal_versions}
+  s.homepage = %q{http://github.com/quirkyinc/vestal_versions}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.5}
@@ -91,15 +91,18 @@ Gem::Specification.new do |s|
       s.add_runtime_dependency(%q<activerecord>, [">= 2.1.0"])
       s.add_development_dependency(%q<shoulda>, [">= 0"])
       s.add_development_dependency(%q<mocha>, [">= 0"])
+      s.add_development_dependency(%q<acts_as_paranoid>, [">= 0"])
     else
       s.add_dependency(%q<activerecord>, [">= 2.1.0"])
       s.add_dependency(%q<shoulda>, [">= 0"])
       s.add_dependency(%q<mocha>, [">= 0"])
+      s.add_dependency(%q<acts_as_paranoid>, [">= 0"])
     end
   else
     s.add_dependency(%q<activerecord>, [">= 2.1.0"])
     s.add_dependency(%q<shoulda>, [">= 0"])
     s.add_dependency(%q<mocha>, [">= 0"])
+    s.add_dependency(%q<acts_as_paranoid>, [">= 0"])
   end
 end
 

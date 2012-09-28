@@ -9,15 +9,16 @@ class CreateVestalVersions < ActiveRecord::Migration
       t.string :tag
 
       t.timestamps
+      t.datetime :deleted_at
     end
 
     change_table :versions do |t|
-      t.index [:versioned_id, :versioned_type]
-      t.index [:user_id, :user_type]
-      t.index :user_name
-      t.index :number
-      t.index :tag
-      t.index :created_at
+      t.index [:versioned_id, :versioned_type, :deleted_at]
+      t.index [:user_id, :user_type, :deleted_at]
+      t.index :user_name, :deleted_at
+      t.index :number, :deleted_at
+      t.index :tag, :deleted_at
+      t.index :created_at, :deleted_at
     end
   end
 
